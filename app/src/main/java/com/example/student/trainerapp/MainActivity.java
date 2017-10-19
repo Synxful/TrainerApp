@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton YesButton;
     ImageButton NoButton;
+    String test = " EINFACH NUR EIN TEST OB DIESER SCHEIß FUNKTIONIERT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
 
     PunkteZaehler p;
     TaskCreator tc;
