@@ -4,29 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hoch"
     tools:context="com.example.student.trainerapp.MainActivity">
 
     <TextView
         android:id="@+id/mainText"
-        android:layout_width="296dp"
-        android:layout_height="382dp"
+        android:layout_width="347dp"
+        android:layout_height="101dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        app:layout_constraintBottom_toTopOf="@+id/YesButon"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/aufgabenBild"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/punkte" />
 
     <TextView
         android:id="@+id/punkte"
-        android:layout_width="350dp"
-        android:layout_height="20dp"
+        android:layout_width="352dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -34,10 +38,13 @@
         android:layout_marginTop="8dp"
         android:text="180 Punkte"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="15dp" />
 
     <ImageButton
         android:id="@+id/NoButton"
@@ -47,7 +54,7 @@
         android:layout_marginRight="90dp"
         android:background="?attr/selectableItemBackground"
         android:elevation="24dp"
-        android:clickable="true"
+        android:enabled="true"
         android:onClick="buttonNoClick"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,11 +69,24 @@
         android:layout_marginLeft="90dp"
         android:background="?attr/selectableItemBackground"
         android:elevation="19dp"
-        android:clickable="true"
+        android:enabled="true"
         android:onClick="buttonYesClick"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:srcCompat="@drawable/png" />
+
+    <ImageView
+        android:id="@+id/aufgabenBild"
+        android:layout_width="346dp"
+        android:layout_height="271dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/YesButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/aufgabe1"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="157dp" />
 
 </android.support.constraint.ConstraintLayout>

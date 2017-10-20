@@ -1,18 +1,17 @@
 package com.example.student.trainerapp;
 
 /**
- * Created by student on 18.10.2017.
+ * Created by Synxfulx on 18.10.2017.
  */
 
 public class PunkteZaehler extends MainActivity {
 
     int punkte;
 
-    public PunkteZaehler() {
-    }
+    public PunkteZaehler() {}
 
     public void win() {
-        int punkteDazu = 10;
+        int punkteDazu = 5;
         punkte = punkte + punkteDazu;
     }
 
