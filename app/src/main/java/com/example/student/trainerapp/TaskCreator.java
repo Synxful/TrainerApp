@@ -1,27 +1,37 @@
 package com.example.student.trainerapp;
 
+import java.util.Random;
+
 /**
- * Created by student on 18.10.2017.
+ * Created by Synxfulx on 18.10.2017.
  */
 
 public class TaskCreator {
 
-    String aufgabe1;
+    int randomZahl;
+
+    String aufgabe;
+    String[] aufgabenArray = {"Mache 25 Liegestützen á 3 Wiederholungen.", "Mache 30 Situps á 3 Wiederholungen.", "Mache 15 Klimmzüge á 3 Wiederholungen.", "Mache 30 Crunches á 3 Wiederholungen.", "Laufe 3 Kilometer in unter 30 Minuten."};
+
+    Random r = new Random();
 
     public TaskCreator() {}
 
 
-    public void taskCreator() {
-        aufgabe1 = "Die erste Aufgabe besteht darin 5x mal im Kreis zu springen du JOCKEL!";
-
-
+    public void createTask() {
+        randomZahl = (r.nextInt(aufgabenArray.length));
+        aufgabe = aufgabenArray[randomZahl];
     }
 
     public String getTask() {
-        return aufgabe1;
+        return aufgabe;
+    }
+
+    public int aufgabenZahl() {
+        return randomZahl;
     }
 
     public void setTask(String task) {
-        this.aufgabe1 = aufgabe1;
+        this.aufgabe = aufgabe;
     }
 }
